@@ -3,8 +3,8 @@ import PageHome from '../page/page-home'
 import PageIssue from '../page/page-issue'
 import PageIssues from '../page/page-issues'
 import React from 'react'
-
 import debug from 'debug'
+import propTypes from 'prop-types'
 
 const error = debug('panda:error:content-manager')
 const log = debug('panda:content-manager')
@@ -47,8 +47,8 @@ class ContentManager extends CtrlComponent {
         />
         <PageIssue
           content={{
-            globalElements: this.getContent('pageIssue')
-          , issue
+            globalElements: this.getContent('pageIssue'),
+            issue,
           }}
           routeFilter={
             (route) => route[0] === 'issues' && route.length === ISSUE_LENGTH
@@ -59,7 +59,7 @@ class ContentManager extends CtrlComponent {
   }
 
   static propTypes = {
-    isProduction: React.PropTypes.bool.isRequired
+    isProduction: propTypes.bool.isRequired,
   }
 }
 

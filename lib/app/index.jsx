@@ -4,6 +4,7 @@ import React from 'react'
 import debug from 'debug'
 import feathers from 'feathers-client'
 import io from 'socket.io-client'
+import propTypes from 'prop-types'
 
 const error = debug('panda:error')
 const log = debug('panda:log')
@@ -13,7 +14,7 @@ class App extends React.Component {
   error = error
   log = log
   state = {
-    content: {}
+    content: {},
   }
 
   constructor(props) {
@@ -27,7 +28,7 @@ class App extends React.Component {
       .configure(feathers.hooks())
       .configure(feathers.socketio(this.socket))
     this.services = {
-      content: this.getService('content')
+      content: this.getService('content'),
     }
 
     if (!props.isProduction) {
@@ -61,9 +62,9 @@ class App extends React.Component {
   }
 
   static propTypes = {
-    apiVersion: React.PropTypes.string.isRequired
-  , isProduction: React.PropTypes.bool.isRequired
-  , socketUrl: React.PropTypes.string.isRequired
+    apiVersion: propTypes.string.isRequired,
+    isProduction: propTypes.bool.isRequired,
+    socketUrl: propTypes.string.isRequired,
   }
 }
 

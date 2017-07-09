@@ -1,5 +1,6 @@
 import CtrlComponent from 'ctrl-react-component'
 import React from 'react'
+import propTypes from 'prop-types'
 
 class Page extends CtrlComponent {
   renderFiltered() {
@@ -15,8 +16,8 @@ class Page extends CtrlComponent {
   }
 
   static propTypes = {
-    id: React.PropTypes.string.isRequired
-  , title: React.PropTypes.string
+    id: propTypes.string.isRequired,
+    title: propTypes.string,
   }
 }
 

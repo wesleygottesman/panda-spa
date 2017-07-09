@@ -1,11 +1,11 @@
 import './style.scss'
 
 import {
-  Button
-, Container
-, Image
-, Menu
-, Segment
+  Button,
+  Container,
+  Image,
+  Menu,
+  Segment,
 } from 'semantic-ui-react'
 import CtrlComponent from 'ctrl-react-component'
 import Player from 'react-player'
@@ -31,11 +31,11 @@ class Navigation extends CtrlComponent {
         basic
         className='navigation'
         style={{
-          backgroundImage: `url(${props.cover})`
-        , backgroundSize: 'cover'
-        , height: props.video ? '56.25vw' : null
-        , marginBottom: 0
-        , maxHeight: '60vh'
+          backgroundImage: `url(${props.cover})`,
+          backgroundSize: 'cover',
+          height: props.video ? '56.25vw' : null,
+          marginBottom: 0,
+          maxHeight: '60vh',
         }}
       >
         <div className='navigation-overlay'/>

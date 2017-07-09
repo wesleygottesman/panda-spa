@@ -1,11 +1,11 @@
 import './style.scss'
 
 import {
-  Container
-, Divider
-, Grid
-, Header
-, Image
+  Container,
+  Divider,
+  Grid,
+  Header,
+  Image,
 } from 'semantic-ui-react'
 import CtrlComponent from 'ctrl-react-component'
 import Navigation from '../../navigation'
@@ -45,8 +45,8 @@ class PageIssues extends CtrlComponent {
             inverted
             textAlign='center'
             style={{
-              fontSize: '4em'
-            , margin: '2em 0 2.5em'
+              fontSize: '4em',
+              margin: '2em 0 2.5em',
             }}
           >Issues</Header>
         </Navigation>

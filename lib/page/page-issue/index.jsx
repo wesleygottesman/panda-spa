@@ -1,8 +1,8 @@
 import {
-  Container
-, Divider
-, Header
-, Segment
+  Container,
+  Divider,
+  Header,
+  Segment,
 } from 'semantic-ui-react'
 import CtrlComponent from 'ctrl-react-component'
 import Markdown from 'react-markdown'
@@ -27,12 +27,12 @@ class PageIssue extends CtrlComponent {
           video={this.get('videoUrl')}
         />
         <Segment basic inverted style={{
-          backgroundColor: '#003666'
-        , marginTop: 0
+          backgroundColor: '#003666',
+         marginTop: 0,
         }}>
           <Header as='h1' textAlign='center' style={{
-            fontSize: '4em'
-          , marginTop: '0.25em'
+            fontSize: '4em',
+           marginTop: '0.25em',
           }}>
             {this.get('title')}
           </Header>
